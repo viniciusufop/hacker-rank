@@ -18,11 +18,11 @@ public class MinimumSwaps2 {
         int position = 0;
         do {
 
-            int correctValueByPosition = position+1;
-            if(arr[position] == correctValueByPosition) {
+            int correctValueByPosition = position + 1;
+            if (arr[position] == correctValueByPosition) {
                 position++;
             } else {
-                for (int pos2 = position+1; pos2 < arr.length; pos2++){
+                for (int pos2 = position + 1; pos2 < arr.length; pos2++) {
                     if (arr[pos2] == correctValueByPosition) {
                         arr[pos2] = arr[position];
                         arr[position] = correctValueByPosition;
@@ -35,8 +35,26 @@ public class MinimumSwaps2 {
         return swaps;
     }
 
+    static int minSwaps(int[] arr) {
+        int counter = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            //[4, 3, 1, 2]
+            if (arr[i] == i + 1)
+                continue;
+
+            counter++; //1
+
+            int swap = arr[i];
+            arr[i] = arr[swap - 1];
+            arr[swap - 1] = swap;
+            i--;
+        }
+        return counter;
+    }
+
     public static void main(String... args) {
         int[] values = {4, 3, 1, 2};//99984
-        System.out.println("Expect is 3, result is " + minimumSwaps(values));
+        System.out.println("Expect is 3, result is " + minSwaps(values));
     }
 }
