@@ -1,6 +1,5 @@
 package br.com.vfs.string_manipulation;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
