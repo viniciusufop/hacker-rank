@@ -1,5 +1,6 @@
 package br.com.vfs.string_manipulation;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -59,5 +60,11 @@ public class MakingAnagrams {
             map.compute(character, (key, value) -> value == null ? 1 : value + 1);
         }
         return map;
+    }
+
+    public static void main(String... args) {
+        final String first = "fcrxzwscanmligyxyvym";
+        final String second = "jxwtrhvujlmrpdoqbisbwhmgpmeoke";
+        System.out.println("Expect is 30, result is " +makeAnagram(first, second));
     }
 }
