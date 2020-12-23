@@ -1,15 +1,6 @@
 package br.com.vfs.arrays;
 
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-
 public class ArrayManipulation {
 
     // Complete the arrayManipulation function below.
@@ -45,31 +36,6 @@ public class ArrayManipulation {
         }
         return max;
     }
-
-//    // Complete the arrayManipulation function below.
-//    static long arrayManipulation(int n, int[][] queries) {
-//        long outputArray[] = new long[n + 2];
-//        for (int i = 0; i < queries.length; i++) {
-//            int a = queries[i][0];
-//            int b = queries[i][1];
-//            int k = queries[i][2];
-//            outputArray[a] += k;
-//            outputArray[b+1] -= k;
-//        }
-//        long max = getMax(outputArray);
-//        return max;
-//    }
-//
-//    private static long getMax(long[] inputArray) {
-//        long max = Long.MIN_VALUE;
-//        long sum = 0;
-//        for (int i = 0; i < inputArray.length; i++) {
-//            sum += inputArray[i];
-//            max = Math.max(max, sum);
-//        }
-//        return max;
-//    }
-
 
     public static void main(String... args) {
         int[][] values =
