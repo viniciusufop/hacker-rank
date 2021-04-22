@@ -1,6 +1,5 @@
-package br.com.vfs.avenuecode;
+package br.com.vfs.AvenueCode;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
